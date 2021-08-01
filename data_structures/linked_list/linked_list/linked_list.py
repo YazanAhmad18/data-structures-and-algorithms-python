@@ -8,21 +8,17 @@ class Linkedlist:
         self.head = None
 
     def insert(self, value):
-        new_node = Node(value)
-        if not self.head:
-            self.head = new_node
-        else:
-             raise Exception("Sorry, this linkedlist has a head")
-
-    def append(self, value):
-        new_node = Node(value)
+       
+        node = Node(value)
         if self.head == None:
-            self.head = new_node
+            self.head = node
+            return self.head.value
         else:
             current = self.head
-            while current.next:
-                current = current.next
-            current.next = Node(value)
+            self.head = node
+            self.head.next = current
+            return self.head.value
+
 
     def includes(self,value):
         if self.head:
@@ -46,6 +42,54 @@ class Linkedlist:
             return data_str
         else:
             raise Exception("Sorry, this list is empty , so plz insert a value ")
+
+
+    def append(self, value):
+        new_node = Node(value)
+        if self.head == None:
+            self.head = new_node
+        else:
+            current = self.head
+            while current.next:
+                current = current.next
+            current.next = Node(value)
+
+
+    def insert_before(self,val,new_val):
+        if self.head ==None:
+            self.head=Node(val)
+        if self.head.value == val:
+            self.insert(new_val)
+        else:
+            try:
+                current=self.head
+                while current.next: 
+                    if  current.next.value== val:
+                        saved_current_val=current.next
+                        current.next=Node(new_val)
+                        current.next.next=saved_current_val 
+                        return current.next
+                    current=current.next
+            except:
+                raise Exception (f'{val} is not in linked list')
+
+
+    def insertAfter(self,value,newVal):
+       
+        current = self.head
+
+        while current is not None:
+            if current.value == value:
+                break
+            current = current.next
+        if current is None:
+            raise Exception(" the value not exisit ")
+        else:
+            new_node = Node(newVal)
+            new_node.next = current.next
+            current.next = new_node
+
+            
 
 if __name__ == "__main__":
         List =Linkedlist()
