@@ -111,3 +111,48 @@ def test_append():
        List.head=List.head.next
     expected='18,6,3,15,16,'
     assert actual == expected
+
+
+def test_k_greater_than_L_list_length():
+    lnk_lst=Linkedlist()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.insertAfter(8,'a')
+    excepted='Error! index out of range'
+    actual=lnk_lst.kthFromEnd(4)
+    assert excepted==actual
+
+def  test_k_and_length_of_list_the_same():
+    lnk_lst=Linkedlist()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.insertAfter(8,'a')
+    excepted='Error! index out of range'
+    actual=lnk_lst.kthFromEnd(3)
+    assert excepted==actual
+
+def test_k_not_positive_integer():
+    lnk_lst=Linkedlist()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.insertAfter(8,'a')
+    excepted="Error! k can't be negative number"
+    actual=lnk_lst.kthFromEnd(-3)
+    assert excepted==actual
+
+
+def test_linked_list_of_size_1():
+    lnk_lst=Linkedlist()
+    lnk_lst.append(8)
+    excepted=8
+    actual=lnk_lst.kthFromEnd(0)
+    assert excepted==actual
+
+def test_happy_path():
+    lnk_lst=Linkedlist()
+    lnk_lst.append(8)
+    lnk_lst.append(3)
+    lnk_lst.insertAfter(8,'a')
+    excepted='a'
+    actual=lnk_lst.kthFromEnd(1)
+    assert excepted==actual
