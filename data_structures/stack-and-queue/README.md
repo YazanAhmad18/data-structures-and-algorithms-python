@@ -29,3 +29,10 @@
 * `dequeue` Nodes or items that are removed from the queue. If called when the queue is empty an exception will be raised.
 * `peek` When you peek you will view the value of the front Node in the queue. If called when the queue is empty an exception will be raised.
 * `is_empty` returns true when queue is empty otherwise returns false.
+
+### Solution
+<!-- Show how to run your code, and examples of it in action -->
+| Table Of Content                               | Links                                       |
+| ---------------------------------------------- | ------------------------------------------- |
+| stack_and_queue                                    | [stack_and_queue.py](stack_and_queue/stack_and_queue.py)|
+| test_stack_and_queue                               | [test_stack_and_queue.py](tests/test_stack_and_queue.py)|
