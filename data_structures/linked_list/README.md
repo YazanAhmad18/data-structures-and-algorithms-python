@@ -87,3 +87,30 @@
 | linked_list                                    | [linked_list.py](linked_list/linked_list.py)|
 | test_linked_list                               | [test_linked_list.py](tests/test_linked_list.py)|
 
+
+# Challenge '4' :
+## #Challenge Summary
+<!-- Description of the challenge -->
+* Write a function called zip lists
+* Arguments: 2 linked lists
+* Return: Linked List, zipped as noted below
+* Zip the two linked lists together into one so that the nodes alternate between the two lists and return a  reference to the head of the zipped list.
+* Try and keep additional space down to O(1)
+
+<!-- ### Whiteboard Process -->
+![ziplist](img/ziplist.jpg)
+<!-- Embedded whiteboard image -->
+### Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+#### Write tests to prove the following functionality:
+* Where list is empty
+* Where list1 is empty
+* Where list2 is empty
+* Where  the lists the same length 
+### Solution
+<!-- Show how to run your code, and examples of it in action -->
+| Table Of Content                               | Links                                       |
+| ---------------------------------------------- | ------------------------------------------- |
+| linked_list                                    | [linked_list.py](linked_list/linked_list.py)|
+| test_linked_list                               | [test_linked_list.py](tests/test_linked_list.py)|
+
