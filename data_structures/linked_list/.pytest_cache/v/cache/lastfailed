@@ -1,4 +1,0 @@
-{
-  "tests/test_linked_list.py::test_kth_middle": true,
-  "tests/test_linked_list.py::test_kth_size_one": true
-}
