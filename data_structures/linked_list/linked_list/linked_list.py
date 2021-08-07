@@ -119,20 +119,11 @@ class Linkedlist:
         for i in range(len(val)):
             if i==j:
                 return val[j]
-    def zipLists(self, other):
-        if(other.head != None):
-            current_self = self.head
-            current_other = other.head
-            while (current_self):
-                    self.insertAfter(current_self.value, current_other.value)
-                    current_self = current_self.next.next
-                    current_other = current_other.next
-                    if current_other == None:
-                        break
-            while(current_other):
-                self.append(current_other.value)
-                current_other = current_other.next
-    
+
+
+ 
+   
+
 
 if __name__ == "__main__":
         List =Linkedlist()
