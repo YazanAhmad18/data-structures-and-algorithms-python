@@ -71,7 +71,7 @@ def test_init_empty():
 # Calling pop or peek on empty stack raises exception
 def test_raise_stack():
    stack=Stack()
-   expected="This is Empty stack"
+   expected="This is empty stack"
    assert expected==stack.peek()
 
 
