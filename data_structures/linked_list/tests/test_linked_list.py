@@ -1,5 +1,6 @@
 from linked_list import __version__
-from linked_list.linked_list import Linkedlist , Node
+from linked_list.linked_list import Linkedlist
+from linked_list.zipLists import zipLists
 def test_version():
     assert __version__ == '0.1.0'
 
@@ -157,57 +158,77 @@ def test_happy_path():
     actual=lnk_lst.kthFromEnd(1)
     assert excepted==actual
 
-def test_zip_empty():
-    list1 = Linkedlist()
-    list2 = Linkedlist()
-    list1.zipLists(list2)
-    assert list1.__str__() == "NULL"   
-def test_zip_1st_empty():
-    list1 = Linkedlist()
-    list2 = Linkedlist()
-    list2.append(1)
-    list2.append(2)
-    list2.append(3)
-    list1.zipLists(list2)
-    assert list1.__str__() == "{1}-> {2}-> {3}-> NULL"
+def test_ll_zip_l1_less_than_l2():
+    lnk_lst1=Linkedlist()
+    lnk_lst1.append(8)
+    lnk_lst1.append(3)
 
-def test_zip_2nd_empty():
-    list1 = Linkedlist()
-    list2 = Linkedlist()
-    list1.append(1)
-    list1.append(2)
-    list1.append(3)
-    list1.zipLists(list2)
-    assert list1.__str__() == "{1}-> {2}-> {3}-> NULL"
+    lnk_lst2=Linkedlist()
+    lnk_lst2.append(4)
+    lnk_lst2.append(7)
+    lnk_lst2.append(5)
+    lnk_lst2.append(6)
 
-def test_zio_same_length():
-    list1 = Linkedlist()
-    list2 = Linkedlist()
-    list1.append(1)
-    list1.append(2)
-    list1.append(3)
-    list2.append(4)
-    list2.append(5)
-    list2.append(6)
-    list1.zipLists(list2)
-    assert list1.__str__() == "{1}-> {4}-> {2}-> {5}-> {3}-> {6}-> NULL"
+    actual= zipLists(lnk_lst1,lnk_lst2)
+    expected='head -> {8} -> {4} -> {3} -> {7} -> {5} -> {6} -> NULL'
+    assert expected==actual
 
-def test_zio_1st_longer():
-    list1 = Linkedlist()
-    list2 = Linkedlist()
-    list1.append(1)
-    list1.append(2)
-    list1.append(3)
-    list2.append(4)
-    list2.append(5)
-    list1.zipLists(list2)
-    assert list1.__str__() == "{1}-> {4}-> {2}-> {5}-> {3}-> NULL"
+def test_ll_zip_l1_greater_than_l2():
+    lnk_lst1=Linkedlist()
+    lnk_lst1.append(8)
+    lnk_lst1.append(3)
+    lnk_lst1.append(5)
+    lnk_lst1.append(6)
 
-def test_zio_2nd_longer():
-    list1 = Linkedlist()
-    list2 = Linkedlist()
-    list1.append(1)
-    list2.append(4)
-    list2.append(5)
-    list1.zipLists(list2)
-    assert list1.__str__() == "{1}-> {4}-> {5}-> NULL"
+    lnk_lst2=Linkedlist()
+    lnk_lst2.append(4)
+    lnk_lst2.append(7)
+   
+    actual=zipLists(lnk_lst1,lnk_lst2)
+    expected='head -> {8} -> {4} -> {3} -> {7} -> {5} -> {6} -> NULL'
+    assert expected==actual
+
+def test_ll_zip_l1_equal_l2():
+    lnk_lst1=Linkedlist()
+    lnk_lst1.append(8)
+    lnk_lst1.append(3)
+
+    lnk_lst2=Linkedlist()
+    lnk_lst2.append(4)
+    lnk_lst2.append(7)
+
+    actual=zipLists(lnk_lst1,lnk_lst2)
+    expected='head -> {8} -> {4} -> {3} -> {7} -> NULL'
+    assert expected==actual
+
+def test_ll_zip_l1_empty():
+    lnk_lst1=Linkedlist()
+
+    lnk_lst2=Linkedlist()
+    lnk_lst2.append(4)
+    lnk_lst2.append(7)
+    actual=zipLists(lnk_lst1,lnk_lst2)
+    expected='head -> {4} -> {7} -> NULL'
+    assert expected==actual
+
+def test_ll_zip_l2_empty():
+    lnk_lst1=Linkedlist()
+    lnk_lst1.append(8)
+    lnk_lst1.append(3)
+
+    lnk_lst2=Linkedlist()
+   
+    actual=zipLists(lnk_lst1,lnk_lst2)
+    expected='head -> {8} -> {3} -> NULL'
+    assert expected==actual
+
+
+
+
+
+
+
+
+
+
+
