@@ -153,8 +153,8 @@ def test_happy_path():
     lnk_lst=Linkedlist()
     lnk_lst.append(8)
     lnk_lst.append(3)
-    lnk_lst.insertAfter(8,'a')
-    excepted='a'
+    lnk_lst.insertAfter(8,2)
+    excepted=2
     actual=lnk_lst.kthFromEnd(1)
     assert excepted==actual
 
