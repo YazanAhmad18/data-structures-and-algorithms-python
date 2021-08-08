@@ -36,3 +36,26 @@
 | ---------------------------------------------- | ------------------------------------------- |
 | stack_and_queue                                    | [stack_and_queue.py](stack_and_queue/stack_and_queue.py)|
 | test_stack_and_queue                               | [test_stack_and_queue.py](tests/test_stack_and_queue.py)|
+
+
+
+# Code Challenge: Class 11 : stack queue pseudo
+<!-- Description of the challenge -->
+### Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![stack-queue-pseudo](./img/stack-queue-pseudo.jpg)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+### Create a brand new PseudoQueue class. Do not use an existing Queue. Instead, this PseudoQueue class will implement our standard queue interface (the two methods listed below), but will internally only utilize 2 Stack objects. Ensure that you create your class with the following methods:
+
+### enqueue(value) which inserts value into the PseudoQueue, using a first-in, first-out approach. dequeue() which extracts a value from the PseudoQueue, using a first-in, first-out approach. The Stack instances have only push, pop, and peek methods. You should use your own Stack implementation. Instantiate these Stack objects in your PseudoQueue constructor.
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+| Table Of Content                               | Links                                       |
+| ---------------------------------------------- | ------------------------------------------- |
+| stack_queue_pseudo                                    | [stack_queue_pseudo.py](stack_and_queue/stack_queue_pseudo.py)|
+| test_stack_queue_pseudo                               | [test_stack_queue_pseudo.py](tests/test_stack_queue_pseudo.py) |
