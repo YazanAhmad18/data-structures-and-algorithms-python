@@ -59,3 +59,25 @@
 | ---------------------------------------------- | ------------------------------------------- |
 | stack_queue_pseudo                                    | [stack_queue_pseudo.py](stack_and_queue/stack_queue_pseudo.py)|
 | test_stack_queue_pseudo                               | [test_stack_queue_pseudo.py](tests/test_stack_queue_pseudo.py) |
+
+
+
+
+# Code Challenge: Class 12 : Animal Shelter.
+<!-- Description of the challenge -->
+### First-in, First out Animal Shelter.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![stack-queue-animal-shelter](./img/stack-queue-animal-shelter.jpg)
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+* enqueue: time O(1) , space O (1)
+* dequeue: time O(n) , space O (1)
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+| Table Of Content                               | Links                                       |
+| ---------------------------------------------- | ------------------------------------------- |
+| stack-queue-animal-shelter                     | [stack-queue-animal-shelter](stack_and_queue/stack_queue_animal_shelter.py)|
+| test_stack-queue-animal-shelter                | [test_stack-queue-animal-shelter](tests/test_stack_queue_animal_shelter.py) |
