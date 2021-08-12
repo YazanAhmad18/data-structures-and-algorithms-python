@@ -9,3 +9,4 @@
 | Code Challenge: Class 11| [stack and queue _pesdo](data_structures/stack-and-queue/README.md)
 | Code Challenge: Class 12| [Animal Shelter](data_structures/stack-and-queue/README.md)
 | Code Challenge: Class 13| [Animal Shelter](data_structures/stack-queue-brackets/README.md)
+| Code Challenge: Class 15| [Trees](data_structures/trees/README.md)
