@@ -23,6 +23,10 @@ def  test_instantiate_tree_single_root_node():
     actual=tree.root.value
     expected=5
     assert actual==expected
+
+
+    
+
    
 
 def test_add_left_child_right_child_single_root():
@@ -66,7 +70,22 @@ def test_collection_from_postorder_traversal():
 
 
 
+def test_max_val():
+    b_tree=Binary_Search_Tree()
+    b_tree.root=Node(2)
+    b_tree.root.left=Node(5)
+    b_tree.root.left.left=Node(6)
+    b_tree.root.left.right=Node(9)
+    b_tree.root.left.right.left=Node(1)
+    b_tree.root.left.right.left=Node(4)
+    b_tree.root.right=Node(3)
+    b_tree.root.right.right=Node(7)
+    b_tree.root.right.right.left=Node(12)
 
+
+    actual=b_tree.max()
+    expected=12
+    assert actual==expected
 
 
     
