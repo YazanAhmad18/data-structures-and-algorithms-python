@@ -5,6 +5,10 @@
 ## Challenge
 <!-- Description of the challenge -->
 
+
+
+## Whiteboard Process
+![max-tree](./img/max-tree.jpg).
 ### Features
 
 #### Node
@@ -28,6 +32,8 @@
     * Arguments: value
     * Return: nothing
     * Adds a new node with that value in the correct location in the binary search tree.
+    * max value
+
 * Contains
   * Argument: value
   * Returns: boolean indicating whether or not the value is in the tree at least once.
@@ -39,6 +45,7 @@
 * post order: time `O(n)`, space `O(n)`
 * Add: time `O(logn)`, space `O(1)`
 * Contains: time `O(logn)`, space `O(1)`
+* max: time `O(n)`, space `O(1)`
 
 ## API
 <!-- Description of each method publicly available in each of your trees -->
@@ -47,6 +54,8 @@
 * Post order: method that return tree in order `< left=> right=> root >`
 * Add: to add a value to a tree by binary search algorithm
 * Contains: to check if the tree contains a value
+* max: method that return max value in tree
+
 
 
 ## Solution
@@ -56,3 +65,8 @@
 | ---------------------------------------------- | ------------------------------------------- |
 | trees                                          | [trees.py](trees/trees.py)                  |
 | test_trees                                     | [test_trees.py](tests/test_trees.py)        |
+
+
+
+
+
