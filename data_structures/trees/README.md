@@ -69,4 +69,29 @@
 
 
 
+# Challenge Summary : Code Challenge: Class 17 : Breadth-first Traversal.
+<!-- Description of the challenge -->
+### Feature Tasks
+
+* Write a function called breadth first
+* Arguments: tree
+* Return: list of all values in the tree, in the order they were encountered
+
+#### `NOTE: Traverse the input tree using a Breadth-first approach`
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![tree-breadth-first](./img/tree-breadth-first.jpg)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+* Time : `O(n)`
+* Space: `O(n)`
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+| Table Of Content                               | Links                                       |
+| ---------------------------------------------- | ------------------------------------------- |
+| trees                                          | [trees.py](trees/trees.py)                  |
+| test_trees                                     | [test_trees.py](tests/test_trees.py)        |
 

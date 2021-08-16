@@ -88,8 +88,24 @@ class Binary_Tree:
             return self.max
     
         return tree(self.root)
-    
 
+    def breadth_first(self):
+        arr_nodes = [self.root]
+        result = []
+
+        if not arr_nodes[0]:
+            return 'an Empty Tree'
+
+        while arr_nodes:
+            node=arr_nodes[0]
+            if node.left:
+                arr_nodes.append(node.left)
+            if node.right:
+                arr_nodes.append(node.right)
+            result.append(arr_nodes[0].value)
+            arr_nodes = arr_nodes[1:]
+            
+        return result
                 
 
 
