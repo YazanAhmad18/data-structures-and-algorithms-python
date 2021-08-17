@@ -105,3 +105,24 @@ def test_breadth_first():
     assert actual == expected
 
     
+def test_fizz_buzz_tree_empty():
+    t = Binary_Tree()
+    actual = t.fizz_buzz_tree()
+    expected = "tree is Empty"
+    assert actual == expected
+
+
+def test_fizz_buzz_tree():
+    tree = Binary_Tree()
+    tree.root=Node(1)
+    tree.root.left=Node(2)
+    tree.root.right=Node(3)
+    tree.root.left.left=Node(5)
+    tree.root.left.right=Node(7)
+    tree.root.right.right=Node(9)
+    tree.root.left.right.left=Node(15)
+    fizz_buzz = tree.fizz_buzz_tree()
+    actual = fizz_buzz.breadth_first()
+    expected = ['1', '2', 'Fizz', 'Buzz', '7', 'Fizz',  'FizzBuzz']
+
+    assert actual == expected
