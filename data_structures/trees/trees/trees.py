@@ -10,67 +10,59 @@ class Binary_Tree:
     def __init__(self):
         self.root = None
 
-    def pre_order(self):
-        try:
+        
+    def post_order(self):
 
             self.values=[]
-         
+            
+            if not self.root:
+                return "Tree is Empty"
+
+            def tree(node_value):
+                if node_value.left !=None:
+                    tree(node_value.left)
+                if node_value.right !=None:
+                    tree(node_value.right)
+                self.values.append(node_value.value)
+                return self.values
+        
+            return tree(self.root)
+
+    def pre_order(self):
+     
+            self.values=[]
             if self.root == None:
                 return "Tree is Empty"
 
-            def tree(node):
-               self.values+=[node.value]
-               if node.left:
-                    tree(node.left)
-               if node.right:
-                    tree(node.right)
+            def tree(node_value):
+               self.values.append(node_value.value)
+               if  node_value.left !=None:
+                    tree(node_value.left)
+               if node_value.right!=None:
+                    tree(node_value.right)
                return self.values
-            
             return tree(self.root)
-        except:
-            return "Error"
+        
 
     def in_order(self):
-        try:
 
             self.values=[]
             
             if not self.root:
                 return "Tree is Empty"
 
-            def tree(node):
-                if node.left:
-                    tree(node.left)
-                self.values+=[node.value]
-                if node.right:
-                    tree(node.right)
+            def tree(node_value):
+                if node_value.left !=None:
+                    tree(node_value.left)
+                self.values.append(node_value.value)
+                if node_value.right !=None:
+                    tree(node_value.right)
                 return self.values
         
             return tree(self.root)
-        except:
-            return "Error"
+      
 
         
-
-    def post_order(self):
-        try:
-
-            self.values=[]
-            
-            if not self.root:
-                return "Tree is Empty"
-
-            def tree(node):
-                if node.left:
-                    tree(node.left)
-                if node.right:
-                    tree(node.right)
-                self.values+=[node.value]
-                return self.values
-        
-            return tree(self.root)
-        except:
-            return "Error"
 
     def max(self):
    
@@ -117,33 +109,33 @@ class Binary_Search_Tree(Binary_Tree):
             self.root = Node(value)
         else:
         
-            current=self.root
-            while current:
-                if  value < current.value : 
-                    if current.left == None: 
-                        current.left = Node(value)
+            cur=self.root
+            while cur:
+                if  value < cur.value : 
+                    if cur.left == None: 
+                        cur.left = Node(value)
                         break
-                    current = current.left
+                    cur = cur.left
                 else:
-                    if current.right == None: 
-                        current.right = Node(value)
+                    if cur.right == None: 
+                        cur.right = Node(value)
                         break
-                    current = current.right
+                    cur = cur.right
 
     def Contains(self,value):
         if self.root==None:
             return 'Tree is Empty'
 
         else:
-            current=self.root
-            while current:
-                if current.value==value:
+            cur=self.root
+            while cur:
+                if cur.value==value:
                     return True
-                elif value < current.value : 
-                    if current.left == None: 
+                elif value < cur.value : 
+                    if cur.left == None: 
                        return False
-                    current = current.left
+                    cur = cur.left
                 else:
-                    if current.right == None: 
+                    if cur.right == None: 
                         return False
-                    current = current.right
+                    cur = cur.right
