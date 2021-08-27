@@ -1,8 +1,8 @@
 from trees import __version__
 
 from trees.trees import  Binary_Tree, Node, Binary_Search_Tree
+from trees.k_ary_tree import k_Node,tree_fizz_buzz,k_ary 
 
-import pytest
 
 
 def test_version():
@@ -126,3 +126,42 @@ def test_fizz_buzz_tree():
     expected = ['1', '2', 'Fizz', 'Buzz', '7', 'Fizz',  'FizzBuzz']
 
     assert actual == expected
+
+
+def test_k_ary_tree():
+
+    k_tree =k_ary()
+    k_tree.root = k_Node(1)
+    k_tree.root.childes.append(k_Node(20))
+    k_tree.root.childes.append(k_Node(3))
+    k_tree.root.childes.append(k_Node(5)) 
+    k_tree.root.childes[0].childes.append(k_Node(7)) 
+    k_tree.root.childes[0].childes[0].childes.append(k_Node(9)) 
+    k_tree.root.childes[0].childes.append(k_Node(2)) 
+    k_tree.root.childes[0].childes[1].childes.append(k_Node(4))
+    k_tree.root.childes[0].childes[1].childes.append(k_Node(6))
+    k_tree.root.childes[0].childes[1].childes.append(k_Node(8)) 
+    k_tree.root.childes[1].childes.append(k_Node(11)) 
+    k_tree.root.childes[1].childes.append(k_Node(12)) 
+    k_tree.root.childes[1].childes.append(k_Node(16)) 
+    k_tree.root.childes[2].childes.append(k_Node(15))
+    k_tree.root.childes[2].childes.append(k_Node(25))
+    k_tree.root.childes[2].childes.append(k_Node(10))
+
+    new_tree = tree_fizz_buzz(k_tree)  
+    assert new_tree.root.value == '1'      
+    assert new_tree.root.childes[0].value == 'Buzz'
+    assert new_tree.root.childes[1].value == 'Fizz'
+    assert new_tree.root.childes[2].value == 'Buzz'
+    assert new_tree.root.childes[0].childes[0].value == '7' 
+    assert new_tree.root.childes[0].childes[0].childes[0].value == 'Fizz'
+    assert new_tree.root.childes[0].childes[1].value == '2'
+    assert new_tree.root.childes[0].childes[1].childes[0].value == '4'
+    assert new_tree.root.childes[0].childes[1].childes[1].value == 'Fizz'
+    assert new_tree.root.childes[1].childes[0].value == '11' 
+    assert new_tree.root.childes[1].childes[1].value == 'Fizz' 
+    assert new_tree.root.childes[1].childes[2].value == '16' 
+    assert new_tree.root.childes[0].childes[1].childes[2].value == '8'
+    assert k_tree.root.childes[2].childes[0].value == 'FizzBuzz'
+    assert k_tree.root.childes[2].childes[1].value == 'Buzz'
+    assert k_tree.root.childes[2].childes[2].value == 'Buzz'
