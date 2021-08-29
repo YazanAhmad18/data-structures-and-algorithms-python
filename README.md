@@ -13,3 +13,4 @@
 | Code Challenge: Class 16| [Trees-max](data_structures/trees/README.md)
 | Code Challenge: Class 17| [Breadth-first Traversal.](data_structures/trees/README.md)
 | Code Challenge: Class 18| [fizz-buzz-tree](data_structures/trees/README.md)
+| Code Challenge: Class 26| [insertion_sort](data_structures/insertion-sort/README.md)
