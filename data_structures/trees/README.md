@@ -113,7 +113,8 @@
 
 ## Whiteboard Process
 <!-- Embedded whiteboard image -->
-![tree-fizz-buzz](./img/tree-fizz-buzz.jpg)
+![tree-fizz-buzz-binary](./img/tree-fizz-buzz.jpg)
+![k-ary-tree-fizz-buzz](./img/fizz-buzz-k-ary-tree.jpg)
 
 ## Approach & Efficiency
 <!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
