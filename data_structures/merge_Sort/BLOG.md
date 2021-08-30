@@ -41,3 +41,30 @@ ALGORITHM Merge(left, right, arr)
        set remaining entries in arr to remaining values in left
 
 ```      
+# Trace
+![merge-sort-blog](img/merge-sort.jpg)
+
+### Input: [8, 4, 23, 42, 16, 15]
+
+
+# pass1:
+## divides the input array into two halves by finding the mid of the array then started from left side to diveds the arrays until the lenght of the array becoumes 1, then we start merging , start with the last left array and last right array  , next we go through the while loop to check the conditon , so yes the index 0 of arr == left[0]==4 then i++ , then goes through the while again , and its return false so we out from whiles , array_index++, i < len(left): so will return [4,23]
+
+# pass2:
+## then we merge the left from divid 2 with the return array from pass1 as we said before
+
+# pass3:
+## start with the secand half , merging the last left array(16) and last right array(15) ,next we go through the while loop and so on , will return [15,16]
+
+# pass4:
+## then we merge the left from divid 2 with the return array from pass2 as we said before
+
+# pass5:
+## do as we did befor until we get the final result sorted array 
+
+
+## Efficency
+- Time: O(n log(n))
+
+
+- Space: O(n)
