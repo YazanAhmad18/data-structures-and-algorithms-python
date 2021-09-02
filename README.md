@@ -15,3 +15,4 @@
 | Code Challenge: Class 18| [fizz-buzz-tree](data_structures/trees/README.md)
 | Code Challenge: Class 26| [insertion_sort](data_structures/insertion-sort/README.md)
 | Code Challenge: Class 27| [marge_sort_array](data_structures/merge_Sort/README.md)
+| Code Challenge: Class 30| [hashtable](data_structures/hash_table/README.md)
