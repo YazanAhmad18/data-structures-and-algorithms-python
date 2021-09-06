@@ -61,5 +61,31 @@
 <!-- Show how to run your code, and examples of it in action -->
 | Table Of Content                               | Links                                       |
 | ---------------------------------------------- | ------------------------------------------- |
-| repeated_word                                  | [repeated_word.py](hashtable/repeated_word.py)|
+| repeated_word                                  | [repeated_word.py](hash_table/repeated_word.py)|
 | test_repeated_word                             | [test_repeated_word.py](tests/test_repeated_word.py)|
+
+# Challenge Summary - Code Challenge: Class 32 - Hashmap Tree Intersection
+<!-- Description of the challenge -->
+## Feature Tasks
+
+### Find all values found to be in 2 binary trees
+
+* Write a function called tree intersection
+* Arguments: two binary trees
+* Return: array
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![hashmap-tree-intersection](img/hashmap-tree-intersection.jpg)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+* time `O(2n)`
+* space `O(n)`
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+| Table Of Content                               | Links                                       |
+| ---------------------------------------------- | ------------------------------------------- |
+| Hashmap Tree Intersection            | [hash_tree_intersection.py](hash_table/hash_tree_intersection.py)|
+| test_hashmap_tree_intersection  | [test_hash_tree_intersection.py](tests/test_hash_tree_intersection.py)|
