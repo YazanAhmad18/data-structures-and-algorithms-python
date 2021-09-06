@@ -66,7 +66,7 @@
 
 # Challenge Summary - Code Challenge: Class 32 - Hashmap Tree Intersection
 <!-- Description of the challenge -->
-## Feature Tasks
+### Feature Tasks
 
 ### Find all values found to be in 2 binary trees
 
