@@ -30,7 +30,7 @@ def test_word_duplicate_summer():
 def test_word_no_duplicate():
     string = 'It was the best of times.'
     actual = repeated_word(string)
-    expected = 'No duplicate'
+    expected = 'there is no duplicate word or reapeted word'
     assert actual == expected
 
 
@@ -39,6 +39,6 @@ def test_word_no_duplicate():
 def test_word_empty():
     string = ''
     actual = repeated_word(string)
-    expected = 'String Is Empty'
+    expected = 'there is no string (empty)'
     assert actual == expected
 
