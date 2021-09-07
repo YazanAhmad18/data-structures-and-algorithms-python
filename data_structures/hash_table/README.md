@@ -89,3 +89,33 @@
 | ---------------------------------------------- | ------------------------------------------- |
 | Hashmap Tree Intersection            | [hash_tree_intersection.py](hash_table/hash_tree_intersection.py)|
 | test_hashmap_tree_intersection  | [test_hash_tree_intersection.py](tests/test_hash_tree_intersection.py)|
+
+
+# Challenge Summary - Code Challenge: Class 33 - Hashmap LEFT JOIN
+<!-- Short summary or background information -->
+### Implement a simplified LEFT JOIN for 2 Hashmaps
+
+## Challenge
+<!-- Description of the challenge -->
+### Write a function that LEFT JOINs two hashmaps into a single data structure
+
+* Write a function called left join
+* Arguments: two hash maps
+  * The first parameter is a hashmap that has word strings as keys, and a synonym of the key as values.
+  * The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
+
+* Return: The returned data structure that holds the results is up to you. It doesn't need to exactly match the output below, so long as it achieves the LEFT JOIN logic
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+* time `O(n^2)`
+* space `O(n)`
+
+## Solution
+<!-- Embedded whiteboard image -->
+![hashmap-left-join](img/hashmap-left-join.jpg)
+
+| Table Of Content               | Links                                                                        |
+| ------------------------------ | ---------------------------------------------------------------------------- |
+| Hashmap Left Join               | [hashmap_left_join.py](hash_table/hashmap_left_join.py)       |
+| Test Hashmap Left Join         | [test_hashmap_left_join.py](tests/test_hashmap_left_join.py) |
