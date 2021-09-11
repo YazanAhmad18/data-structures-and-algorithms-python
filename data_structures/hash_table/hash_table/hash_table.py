@@ -93,14 +93,24 @@ class Hashtable:
         index= (ASSCI_Sumation*11) % self.size
         return index
 
+   
     def __str__(self):
 
         for bucket in self._buckets:
-            if bucket != None :
-                self.str_bucket += bucket.__str__()
+            if bucket != None:
+                self.str_buckets += bucket.__str__() + "  |  "
 
-        return self.str_bucket
+        return self.str_buckets
 
+    def hashtable_dictonary(self):
+        dictonary_buckets = {}
+        for bucket in self._buckets:
+            if bucket:
+                current_dic = bucket.head
+                while current_dic:
+                    dictonary_buckets.update(current_dic.value)
+                    current_dic = current_dic.next
+        return dictonary_buckets
 
 if __name__ == "__main__":
     hashtable = Hashtable()

@@ -2,9 +2,7 @@ from hash_table.hash_table import Hashtable
 from hash_table.hashmap_left_join import left_join
 
 
-
-
-def test_one():
+def test_left_join_one():
     hashtable1 = Hashtable()
     hashtable1.add('fond', 'enamored')
     hashtable1.add('wrath', 'anger')
@@ -21,17 +19,13 @@ def test_one():
 
     actual = left_join(hashtable1, hashtable2)
 
-    expected = [['diligent', 'employed', 'idle'],
-                ['outift', 'garb', None],
-                ['fond', 'enamored', 'averse'],
-                ['guide', 'usher', 'follow'],
-                ['wrath', 'anger', 'delight']
-                ]
+    expected = [['diligent', 'employed', 'idle'],['outift', 'garb', None],['fond', 'enamored', 'averse'],  ['guide', 'usher', 'follow'],  ['wrath', 'anger', 'delight']]
+
     assert expected == actual
 
 
 
-def test_hash_one_empty():
+def test_left_join_two_right_hash_table_empty():
     hashtable1 = Hashtable()
 
     hashtable2 = Hashtable()
@@ -43,13 +37,13 @@ def test_hash_one_empty():
 
     actual = left_join(hashtable1, hashtable2)
 
-    expected = "right table is empty"
+    expected = "Right HashTable Empty"
 
     assert expected == actual
 
 
 
-def test_hash_two_empty():
+def test_left_join_three_left_hash_table_empty():
     hashtable1 = Hashtable()
     hashtable1.add('fond', 'enamored')
     hashtable1.add('wrath', 'anger')
@@ -61,12 +55,6 @@ def test_hash_two_empty():
 
     actual = left_join(hashtable1, hashtable2)
 
-    expected = [['diligent', 'employed', None],
-                ['outift', 'garb', None],
-                ['fond', 'enamored', None],
-                ['guide', 'usher', None],
-                ['wrath', 'anger', None]
-                ]
+    expected = [['diligent', 'employed', None],['outift', 'garb', None],['fond', 'enamored', None],  ['guide', 'usher', None], ['wrath', 'anger', None]]
 
     assert expected == actual
-
