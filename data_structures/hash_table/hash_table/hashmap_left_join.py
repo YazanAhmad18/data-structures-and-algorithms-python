@@ -8,29 +8,26 @@ def left_join(hashtable1, hashtable2):
     Arguments: two hash maps
         - The first parameter is a hashmap that has word strings as keys, and a synonym of the key as values.
         - The second parameter is a hashmap that has word strings as keys, and antonyms of the key as values.
-    Return:
+    Return: The returned data structure that holds the results is up to you. It doesn’t need to exactly match the output below, so long as it achieves the LEFT JOIN logic
     """
-    arr_key = []
-    for sample_nodes in hashtable1._buckets:
-        if sample_nodes != None:
-            node = sample_nodes.head
-            current_value = node.value
-            while current_value:
-                key = list(current_value.keys())[0]
-                if hashtable2.contains(key):
-                    arr_key += [[key, current_value[key], hashtable2.get(key)]]
-                else:
-                    arr_key += [[key, current_value[key], None]]
-                if node.next:
-                    node = node.next
-                    current_value = node.value
-                else:
-                    break
 
-    if not arr_key:
-        return "right table is empty"
+    final_result = []
 
-    return arr_key
+    list_buckets = hashtable1.hashtable_dictonary()
+
+    for key, value in list_buckets.items():
+     
+
+        if hashtable2.contains(key):
+            final_result += [[key, value, hashtable2.get(key)]]
+
+        else:
+            final_result += [[key, value, None]]
+
+    if not final_result:
+        return "Right HashTable Empty"
+
+    return final_result
 
 
 
