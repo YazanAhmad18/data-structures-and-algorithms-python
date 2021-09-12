@@ -1,3 +1,5 @@
+from graph.stack_and_queue import Stack, Queue
+
 class Node():
 
     def __init__(self, value):
@@ -68,6 +70,37 @@ class Graphs():
         """
         return len(self._adjacency_list)
 
+
+    def breadth_first(self, node):
+        """
+        Write the following method for the Graph class:
+        breadth first
+        Arguments: Node
+        Return: A collection of nodes in the order they were visited.
+        Display the collection
+        """
+        if node not in self._adjacency_list:
+            return 'node are  not in Graph'
+        elif self._adjacency_list[node]==[]:
+            return 'node does not have any neighbors'
+        breadth = Queue()
+        visited = []
+        nodes = []
+        breadth.enqueue(node)
+        visited.append(node)
+        
+        while breadth.front:
+            front = breadth.dequeue()
+            nodes.append(front.value)
+
+            for child in self._adjacency_list[front]:
+
+                if child.node not in visited:
+                    visited.append(child.node)
+                    breadth.enqueue(child.node)
+
+        return nodes
+
     def __str__(self):
         str = ''
         for node in self._adjacency_list:
@@ -98,3 +131,28 @@ if __name__ == "__main__":
     print(graph.get_neighbors(d))
     print(graph.size())
     print(graph)
+
+
+    graph_new = Graphs()
+    pandora = graph_new.add_node('Pandora')
+    arendelle = graph_new.add_node('Arendelle')
+    metroville = graph_new.add_node('Metroville')
+    monstroplolis = graph_new.add_node('Monstroplolis')
+    narnia = graph_new.add_node('Narnia')
+    naboo = graph_new.add_node('Naboo')
+    graph_new.add_Edge(pandora, arendelle, 1)
+    graph_new.add_Edge(arendelle, metroville, 1)
+    graph_new.add_Edge(arendelle, monstroplolis, 1)
+    graph_new.add_Edge(metroville, arendelle, 1)
+    graph_new.add_Edge(metroville, monstroplolis, 1)
+    graph_new.add_Edge(metroville, narnia, 1)
+    graph_new.add_Edge(metroville, naboo, 1)
+    graph_new.add_Edge(monstroplolis, arendelle, 1)
+    graph_new.add_Edge(monstroplolis, metroville, 1)
+    graph_new.add_Edge(monstroplolis, arendelle, 1)
+    graph_new.add_Edge(narnia, metroville, 1)
+    graph_new.add_Edge(narnia, naboo, 1)
+    graph_new.add_Edge(naboo, monstroplolis, 1)
+    graph_new.add_Edge(naboo, metroville, 1)
+    graph_new.add_Edge(naboo, narnia, 1)
+    print(graph_new.breadth_first(pandora))

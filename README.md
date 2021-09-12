@@ -19,3 +19,4 @@
 | Code Challenge: Class 31| [hashmap_repeated_word](data_structures/hash_table/README.md)
 | Code Challenge: Class 32| [hashmap_intersection](data_structures/hash_table/README.md)
 | Code Challenge: Class 33| [hashmap_left_join](data_structures/hash_table/README.md)
+| Code Challenge: Class 36| [hashmap_left_join](data_structures/graph/README.md)
