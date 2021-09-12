@@ -1,19 +1,23 @@
 class Node():
+
     def __init__(self, value):
         self.value = value
 
     def __str__(self):
         return str(self.value)
 
+
 class Edge():
     def __init__(self, node, weight=1):
         self.node = node
         self.weight = weight
 
+
 class Graphs():
 
     def __init__(self):
         self._adjacency_list = {}
+
 
     def add_node(self, value):
         """
@@ -25,31 +29,27 @@ class Graphs():
         self._adjacency_list[node] = []
         return node
 
-
     def add_Edge(self, node1, node2, weight=1):
         """
         Adds a new edge between two nodes in the graph
         If specified, assign a weight to the edge
         Both nodes should already be in the Graph
+
         Arguments: 2 nodes to be connected by the edge, weight (optional)
         Returns: nothing
         """
         if node1 and node2 in self._adjacency_list:
             self._adjacency_list[node1].append(Edge(node2, weight))
 
-
     def get_nodes(self):
         """
         Returns all of the nodes in the graph as a collection (set, list, or similar)
         Arguments: none
         """
-        list = []
-        if self._adjacency_list.keys():
-            for node in self._adjacency_list.keys():
-                list.append(node.__str__())
-            return list
+        if self._adjacency_list:
+            return [key.value for key in self._adjacency_list]
         else:
-            return 'NULL'
+            return 'null'
 
 
     def get_neighbors(self, node):
@@ -59,8 +59,7 @@ class Graphs():
         get neighbors
         Arguments: node
         """
-        return self._adjacency_list[node]
-
+        return [(edge.node.value, edge.weight) for edge in self._adjacency_list[node]]
 
     def size(self):
         """
@@ -69,27 +68,19 @@ class Graphs():
         """
         return len(self._adjacency_list)
 
-
     def __str__(self):
         str = ''
-        for node in self._adjacency_list.keys():
-
-            str += f'[ {node.value} ] -> ['
-
-            for edge in self._adjacency_list[node]:
-                str += f" {edge.node.value}, "
-
-            str += ']\n'
+        for node in self._adjacency_list:
+            str += f'[{node.value}] -> {self.get_neighbors(node)}\n'
         return str
-
 
 if __name__ == "__main__":
     graph = Graphs()
-
     a = graph.add_node('A')
     b = graph.add_node('B')
     c = graph.add_node('C')
     d = graph.add_node('D')
+    graph.add_Edge(a, a, 1)
     graph.add_Edge(a, b, 4)
     graph.add_Edge(a, d, 9)
     graph.add_Edge(a, c, 3)
@@ -101,5 +92,9 @@ if __name__ == "__main__":
     graph.add_Edge(d, b, 5)
     graph.add_Edge(d, c, 6)
     print(graph.get_nodes())
-    print(graph)
+    print(graph.get_neighbors(a))
+    print(graph.get_neighbors(b))
+    print(graph.get_neighbors(c))
+    print(graph.get_neighbors(d))
     print(graph.size())
+    print(graph)
