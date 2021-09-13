@@ -158,3 +158,32 @@
 | ---------------- | ------------------------------------ |
 | Graph            | [Graph.py](graph/graph.py)           |
 | Test Graph       | [test_graph.py](tests/test_graph.py) |
+
+
+# Challenge Summary - Graph Business Trip
+<!-- Description of the challenge -->
+## Given a business trip itinerary, and an Alaska Airlines route map, is the trip possible with direct flights? If so, how much will the total trip cost be?
+
+### Feature Tasks
+
+* Write a function called business trip
+* Arguments: graph, array of city names
+* Return: cost or null
+
+> Determine whether the trip is possible with direct flights, and how much it would cost.
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![graph-business-trip](img/graph-business-trip.jpg)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+* time: `O(n^2)`
+* space: `O(1)`
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+| Table Of Content         | Links                                                            |
+| ------------------------ | ---------------------------------------------------------------- |
+| Graph Business Trip      | [graph_business_trip.py](graph/graph_business_trip.py)           |
+| Test Graph Business Trip | [test_graph_business_trip.py](tests/test_graph_business_trip.py) |
