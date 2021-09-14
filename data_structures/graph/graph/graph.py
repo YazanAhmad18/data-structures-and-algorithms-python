@@ -101,6 +101,38 @@ class Graphs():
 
         return nodes
 
+
+    def depth_first(self, node):
+        """
+        Write the following method for the Graph class:
+        depth first
+        Arguments: Node (Starting point of search)
+        Return: A collection of nodes in their pre-order depth-first traversal order
+        Display the collection
+        """
+        depth_first_final = []
+        depth_first_final.append(node.value)
+
+        if node not in self._adjacency_list:
+            return 'node does not exist Graph'
+        elif self._adjacency_list[node] == []:
+            return 'node does not have any neighbors'
+
+        def walk_nodes(node):
+            neighbors = self._adjacency_list[node]
+
+            for edge in neighbors:
+                children_value = edge.node.value
+
+                if children_value not in depth_first_final:
+                    depth_first_final.append(children_value)
+                    walk_nodes(edge.node)
+
+        walk_nodes(node)
+
+        return depth_first_final
+
+
     def __str__(self):
         str = ''
         for node in self._adjacency_list:
@@ -156,3 +188,33 @@ if __name__ == "__main__":
     graph_new.add_Edge(naboo, metroville, 1)
     graph_new.add_Edge(naboo, narnia, 1)
     print(graph_new.breadth_first(pandora))
+
+
+    g3 = Graphs()
+    a = g3.add_node('A')
+    b = g3.add_node('B')
+    c = g3.add_node('C')
+    d = g3.add_node('D')
+    e = g3.add_node('E')
+    f = g3.add_node('F')
+    h = g3.add_node('H')
+    g = g3.add_node('G')
+    g3.add_Edge(a, b, 1)
+    g3.add_Edge(a, d, 1)
+    g3.add_Edge(b, a, 1)
+    g3.add_Edge(b, c, 1)
+    g3.add_Edge(b, d, 1)
+    g3.add_Edge(c, b, 1)
+    g3.add_Edge(c, g, 1)
+    g3.add_Edge(d, a, 1)
+    g3.add_Edge(d, b, 1)
+    g3.add_Edge(d, e, 1)
+    g3.add_Edge(d, h, 1)
+    g3.add_Edge(d, f, 1)
+    g3.add_Edge(e, d, 1)
+    g3.add_Edge(f, d, 1)
+    g3.add_Edge(f, h, 1)
+    g3.add_Edge(g, c, 1)
+    g3.add_Edge(h, d, 1)
+    g3.add_Edge(h, f, 1) 
+    print(g3.depth_first(a))

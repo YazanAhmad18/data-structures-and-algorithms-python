@@ -187,3 +187,33 @@
 | ------------------------ | ---------------------------------------------------------------- |
 | Graph Business Trip      | [graph_business_trip.py](graph/graph_business_trip.py)           |
 | Test Graph Business Trip | [test_graph_business_trip.py](tests/test_graph_business_trip.py) |
+
+
+# Challenge Summary - Graph Depth First
+<!-- Description of the challenge -->
+## Conduct a depth first preorder traversal on a graph
+
+### Feature Tasks
+
+#### Write the following method for the Graph class:
+
+* depth first
+* Arguments: Node (Starting point of search)
+* Return: A collection of nodes in their pre-order depth-first traversal order
+* Display the collection
+
+## Whiteboard Process
+<!-- Embedded whiteboard image -->
+![graph-depth-first](img/graph-depth-first.jpg)
+
+## Approach & Efficiency
+<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+* time: `O(n^2)`
+* space: `O(n)`
+
+## Solution
+<!-- Show how to run your code, and examples of it in action -->
+| Table Of Content | Links                                         |
+| ---------------- | --------------------------------------------- |
+| Graph            | [Graph.py](graph/graph.py)                    |
+| Test Depth First | [test_depth_first](tests/test_depth_first.py) |
